@@ -1,0 +1,112 @@
+:root {
+  --primary-color: rgba(255, 255, 255, 0.9);
+  --secondary-color: rgba(255, 255, 255, 0.6);
+  --button-bg: #ffffff;
+  --button-hover: #0278a7;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/fundo.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;   
+}
+
+/* Card estilo vidro */
+.wrapper {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  padding: 40px 35px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Imagem de perfil */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-color);
+  object-fit: cover;
+}
+
+/* Títulos e textos */
+h1, h3, h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+/* Divisor */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 20px 0;
+}
+
+/* Campos de formulário */
+.custom-input {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--border-color);
+  color: var(--primary-color);
+  border-radius: 25px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+  color: var(--secondary-color);
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: var(--button-hover);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(2, 120, 167, 0.5);
+}
+
+/* Botão */
+.custom-btn {
+  background-color: var(--button-bg);
+  color: #333;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: var(--button-hover);
+  color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .wrapper {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
